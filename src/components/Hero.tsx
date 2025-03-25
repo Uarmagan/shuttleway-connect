@@ -16,12 +16,18 @@ export default function Hero() {
       
       <div className="container relative z-10 mx-auto px-4 py-32 flex flex-col items-center">
         <div className="text-center mb-10">
-          <div className="w-64 h-64 md:w-80 md:h-80 mx-auto mb-8 opacity-90">
-            <img 
-              src="/lovable-uploads/e18a6ff7-1211-4715-8f19-4b8f2b7178e2.png" 
-              alt="US Airport Shuttle Logo" 
-              className="w-full h-full object-contain animate-fadeIn"
-            />
+          <div className="w-64 h-64 md:w-80 md:h-80 mx-auto mb-8 relative">
+            {/* Added subtle glow effect behind the logo */}
+            <div className="absolute inset-0 bg-gold/10 blur-3xl rounded-full"></div>
+            
+            {/* Logo container with glass effect */}
+            <div className="relative w-full h-full p-4 rounded-full bg-gradient-to-b from-black/40 to-transparent backdrop-blur-sm border border-gold/20">
+              <img 
+                src="/lovable-uploads/e18a6ff7-1211-4715-8f19-4b8f2b7178e2.png" 
+                alt="US Airport Shuttle Logo" 
+                className="w-full h-full object-contain animate-fadeIn"
+              />
+            </div>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6 opacity-0 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
