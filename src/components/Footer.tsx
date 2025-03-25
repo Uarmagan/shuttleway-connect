@@ -1,5 +1,5 @@
 
-import { ArrowUp, Mail, Phone } from "lucide-react";
+import { ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,15 +24,33 @@ export default function Footer() {
             className="w-36 h-36 object-contain mb-6"
           />
           
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-gold" />
-              <span className="text-white/80">1-800-SHUTTLE</span>
+          <div className="flex flex-wrap justify-center gap-8 mb-8">
+            <div className="flex flex-col items-center">
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="h-4 w-4 text-gold" />
+                <span className="text-white/90 font-medium">Chicago</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-gold" />
+                <span className="text-white/80">312-473-8000</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-gold" />
-              <span className="text-white/80">info@usairportshuttle.com</span>
+            
+            <div className="flex flex-col items-center">
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="h-4 w-4 text-gold" />
+                <span className="text-white/90 font-medium">New York</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-gold" />
+                <span className="text-white/80">212-903-4460</span>
+              </div>
             </div>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-8">
+            <Mail className="h-4 w-4 text-gold" />
+            <span className="text-white/80">info@usairportshuttle.com</span>
           </div>
           
           <p className="text-white/60 text-sm">
