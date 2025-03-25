@@ -33,16 +33,18 @@ export default function Hero() {
           </p>
           
           <div 
-            className="inline-block rounded-lg px-6 py-3 opacity-0 animate-fadeIn shadow-lg transform transition-all duration-300 hover:scale-105"
+            className="inline-block rounded-lg px-8 py-4 opacity-0 animate-fadeIn shadow-xl transform transition-all duration-300 hover:scale-105 relative overflow-hidden"
             style={{ 
               animationDelay: '0.9s',
-              background: 'linear-gradient(135deg, #dbba5b 0%, #b38728 50%, #8c6914 100%)',
-              boxShadow: '0 10px 15px -3px rgba(179, 135, 40, 0.3), 0 4px 6px -4px rgba(179, 135, 40, 0.4)'
+              background: 'linear-gradient(135deg, #f0c755 0%, #d4af37 50%, #9e7e2d 100%)',
             }}
           >
-            <p className="font-bold" style={{ 
+            {/* Shiny overlay effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shimmer"></div>
+            
+            <p className="font-bold text-lg relative z-10" style={{ 
               color: '#000',
-              textShadow: '0 1px 2px rgba(255, 255, 255, 0.2)'
+              textShadow: '0 1px 2px rgba(255, 255, 255, 0.3)'
             }}>
               Coming Soon to Other Cities!
             </p>

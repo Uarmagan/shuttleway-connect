@@ -101,6 +101,10 @@ export default {
 				pulse: {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				shimmer: {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
 				}
 			},
 			animation: {
@@ -109,7 +113,8 @@ export default {
 				fadeIn: 'fadeIn 0.7s ease-out forwards',
 				slideInRight: 'slideInRight 0.7s ease-out forwards',
 				slideInLeft: 'slideInLeft 0.7s ease-out forwards',
-				pulse: 'pulse 2s infinite'
+				pulse: 'pulse 2s infinite',
+				shimmer: 'shimmer 2s infinite'
 			}
 		}
 	},
