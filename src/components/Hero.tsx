@@ -32,9 +32,21 @@ export default function Hero() {
             Providing affordable and convenient shared-ride shuttle services between airports and downtown Chicago and New York City.
           </p>
           
-          <p className="text-gold-light italic text-lg md:text-xl opacity-0 animate-fadeIn" style={{ animationDelay: '0.9s' }}>
-            Coming Soon to Other Cities!
-          </p>
+          <div 
+            className="inline-block rounded-lg px-6 py-3 opacity-0 animate-fadeIn shadow-lg transform transition-all duration-300 hover:scale-105"
+            style={{ 
+              animationDelay: '0.9s',
+              background: 'linear-gradient(135deg, #dbba5b 0%, #b38728 50%, #8c6914 100%)',
+              boxShadow: '0 10px 15px -3px rgba(179, 135, 40, 0.3), 0 4px 6px -4px rgba(179, 135, 40, 0.4)'
+            }}
+          >
+            <p className="font-bold" style={{ 
+              color: '#000',
+              textShadow: '0 1px 2px rgba(255, 255, 255, 0.2)'
+            }}>
+              Coming Soon to Other Cities!
+            </p>
+          </div>
         </div>
         
         <a 
