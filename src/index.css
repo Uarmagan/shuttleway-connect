@@ -5,32 +5,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 6%;
-    --foreground: 0 0% 98%;
+    /* Light mode palette */
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 0 0% 10%; /* near-black for primary text */
 
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 42 60% 43%;
-    --primary-foreground: 0 0% 100%;
+    /* Keep gold as primary accent */
+    --primary: 42 60% 43%; /* shuttle gold */
+    --primary-foreground: 0 0% 0%; /* dark text on gold for contrast */
 
-    --secondary: 0 0% 9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 16%;
+    --border: 214.3 31.8% 91.4%; /* gray-200 */
+    --input: 214.3 31.8% 91.4%;
     --ring: 42 60% 43%;
 
     --radius: 0.5rem;
@@ -43,7 +45,7 @@
   }
 
   body {
-    @apply bg-shuttle-dark text-foreground antialiased;
+    @apply bg-white text-foreground antialiased;
   }
 
   html {
@@ -53,7 +55,8 @@
 
 @layer utilities {
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent;
+    /* Darker gold gradient + subtle shadow for better contrast on light bg */
+    @apply bg-gradient-to-r from-gold-dark via-gold to-gold-dark bg-clip-text text-transparent drop-shadow;
   }
   
   .bg-gradient-gold {
@@ -61,7 +64,7 @@
   }
 
   .glass-card {
-    @apply bg-shuttle-light/50 backdrop-blur-md border border-white/10 shadow-lg;
+    @apply bg-white/90 backdrop-blur-md border border-gray-200 shadow-md;
   }
   
   .bounce-on-hover {

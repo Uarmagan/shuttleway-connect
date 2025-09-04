@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import SprinterShowcase from "@/components/SprinterShowcase";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
@@ -34,9 +35,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-shuttle-dark text-white relative">
+    <div className="min-h-screen bg-white text-gray-900 relative">
       <Navbar />
       <Hero />
+      <SprinterShowcase />
       <Services />
       <WhyChooseUs />
       <Footer />
